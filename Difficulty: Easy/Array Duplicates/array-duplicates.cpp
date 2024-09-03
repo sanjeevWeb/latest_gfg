@@ -107,22 +107,26 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
   public:
-    vector<int> duplicates(vector<long long> arr) {
+    vector<int> duplicates(vector<int> arr) {
         // code here
-        vector<int> dup;
-        map<int, int> mp;
-        
-        for (int i = 0; i < arr.size(); i++)
+        int n=arr.size();
+        vector<int>ans;
+        unordered_map<long long,int>mp;
+        for(int i=0;i<n;i++){
             mp[arr[i]]++;
-        
-        for (auto x : mp) {
-            if (x.second > 1)
-                dup.emplace_back(x.first);
         }
-        
-        if (dup.size() < 1) dup.push_back(-1);
-        
-        return dup;
+        bool check=false;
+        for(auto &i : mp){
+            if(i.second > 1){
+                ans.push_back(i.first);
+                check = true;
+            }
+        }
+        sort(ans.begin(),ans.end());
+        if(check){
+            return ans;
+        }
+        return {-1};
     }
 };
 
@@ -132,7 +136,7 @@ class Solution {
 void solve() {
     int n;
     cin >> n;
-    vector<long long> arr(n);
+    vector<int> arr(n);
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
