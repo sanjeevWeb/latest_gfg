@@ -13,18 +13,20 @@ class Solution
     {
         // Your code here
         stack<char>st;
-        for(int i=0;i<x.size();i++){
+        for(char ch : x){
             if(st.empty()){
-                st.push(x[i]);
+                st.push(ch);
             }
-            else if(x[i]==')' and st.top()=='(' or x[i]=='}' and st.top()=='{' or x[i]==']' and st.top()=='['){
+            else if((ch == ')' and st.top() == '(') or (ch == ']' and st.top() == '[') or (ch == '}' and st.top() == '{')) {
                 st.pop();
-            }
+            } 
             else{
-                st.push(x[i]);
+                st.push(ch);
             }
         }
-        if(st.empty()) return true;
+        if(st.empty()){
+            return true;
+        }
         return false;
     }
 
