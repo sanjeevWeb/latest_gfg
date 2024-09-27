@@ -1,33 +1,17 @@
 //{ Driver Code Starts
-
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> uniqueId(int a[], int n) ;
 
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        int n, i;
-        cin >> n;
-        int a[n];
-        for (i = 0; i < n; i++) {
-            cin >> a[i];
-        }
-        vector<int> ans = uniqueId(a, n);
-        for (it : ans) cout << it << " ";
-        cout << endl;
-    }
-    return 0;
-}
 // } Driver Code Ends
-
-
-
-vector<int> uniqueId(int a[], int n) {
-    unordered_map<int, int>m;
+// User function Template for C++
+class Solution {
+  public:
+    vector<int> uniqueId(vector<int>& a) {
+        // code
+        unordered_map<int, int>m;
         vector<int> v;
+        int n = a.size();
         for(int i=0;i<n;i++){
             if(m[a[i]]==0){
               m[a[i]]++;
@@ -35,4 +19,33 @@ vector<int> uniqueId(int a[], int n) {
             } 
         }
         return v;
+    }
+};
+
+//{ Driver Code Starts.
+
+int main() {
+    string ts;
+    getline(cin, ts);
+    int t = stoi(ts);
+    while (t--) {
+        vector<int> arr;
+        string input;
+        getline(cin, input);
+        stringstream ss(input);
+        int number;
+        while (ss >> number) {
+            arr.push_back(number);
+        }
+        Solution obj;
+        vector<int> ans = obj.uniqueId(arr);
+        for (int i = 0; i < ans.size(); i++) {
+            cout << ans[i] << " ";
+        }
+        cout << endl;
+        // cout << "~" << endl;
+    }
+    return 0;
 }
+
+// } Driver Code Ends
