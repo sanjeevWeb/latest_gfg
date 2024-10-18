@@ -1,46 +1,38 @@
 //{ Driver Code Starts
-//Initial Template for C++
+// Initial Template for C++
 
-
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 
-
 // } Driver Code Ends
-//User function Template for C++
-class Solution
-{
-    public:
-    string reverseWord(string str)
-    {
+// User function Template for C++
+class Solution {
+  public:
+    string reverseString(string& s) {
         // Your code goes here
-        string s = "";
-        for(int i=str.size()-1;i>=0;i--){
-            s += str[i];
+        string str = "";
+        for(int i=s.size()-1;i>=0;i--){
+            str += s[i];
         }
-        return s;
+        return str;
     }
 };
-
 
 
 //{ Driver Code Starts.
 
 int main() {
-	
-	int t;
-	cin>>t;
-	while(t--)
-	{
-    	string s;
-    	cin >> s;
-    	Solution ob;
-    	cout << ob.reverseWord(s) << endl;
-	}
-	return 0;
-	
-}
 
+    int t;
+    cin >> t;
+    while (t--) {
+        string s;
+        cin >> s;
+        Solution ob;
+        cout << ob.reverseString(s) << endl;
+    }
+    return 0;
+}
 
 // } Driver Code Ends
