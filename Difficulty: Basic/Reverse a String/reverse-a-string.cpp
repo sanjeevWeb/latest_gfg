@@ -10,7 +10,7 @@ using namespace std;
 class Solution {
   public:
     string reverseString(string& s) {
-        // Your code goes here
+        // code here
         string str = "";
         for(int i=s.size()-1;i>=0;i--){
             str += s[i];
@@ -31,6 +31,9 @@ int main() {
         cin >> s;
         Solution ob;
         cout << ob.reverseString(s) << endl;
+
+        cout << "~"
+             << "\n";
     }
     return 0;
 }
