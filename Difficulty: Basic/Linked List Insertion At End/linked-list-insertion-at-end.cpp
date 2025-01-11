@@ -37,7 +37,7 @@ class Solution {
   public:
     Node *insertAtEnd(Node *head, int x) {
         // Code here
-         Node *newNode = new Node(x);
+        Node *newNode = new Node(x);
     //   newNode->data = x;
        newNode->next =  NULL;
       if(head == NULL){
