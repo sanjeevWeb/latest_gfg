@@ -8,23 +8,16 @@ using namespace std;
 class Solution {
   public:
     // Function to find equilibrium point in the array.
-    int equilibriumPoint(vector<int> &a) {
+    int findEquilibrium(vector<int> &arr) {
         // code here
-        int n = a.size();
-        long long int sum = 0;
-        long long int leftsum = 0;
-        for(int i=0;i<n;i++){
-            sum += a[i];
-        }
+         int totalSum=0,leftSum=0;
+        for(int i=0;i<arr.size();i++) totalSum+=arr[i];
         
-        for(int i=0;i<n;i++){
-            sum -= a[i];
-            if(sum == leftsum){
-                return i+1;
-            }
-            leftsum += a[i];
+        for(int i=0;i<arr.size();i++){
+            int rightSum=totalSum-leftSum-arr[i];
+            if(leftSum==rightSum) return i;
+            leftSum+=arr[i];
         }
-       
         return -1;
     }
 };
@@ -47,7 +40,7 @@ int main() {
         }
 
         Solution ob;
-        cout << ob.equilibriumPoint(arr) << endl;
+        cout << ob.findEquilibrium(arr) << endl;
         cout << "~" << endl;
     }
 }
