@@ -64,7 +64,9 @@ int main() {
         getline(cin, str);
 
         cout << ob.compareFrac(str) << endl;
-    }
+    
+cout << "~" << "\n";
+}
     return 0;
 }
 
