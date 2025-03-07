@@ -6,46 +6,38 @@ using namespace std;
 
 
 // } Driver Code Ends
+
 // User function template for C++
 
 class Solution {
   public:
-    int majorityElement(vector<int>& a) {
+    int majorityElement(vector<int>& arr) {
 
         // your code here
-         int candidate = -1; // Initialize candidate as -1
-    int count = 0;
-    int N = a.size();
+         int n = arr.size();  
 
-    // Find the potential candidate for the majority element
-    for (int i = 0; i < N; i++) {
-        if (count == 0) {
-            candidate = a[i];
-            count = 1;
-        } else {
-            if (a[i] == candidate) {
+    // Loop to consider each element as a candidate for majority
+    for (int i = 0; i < n; i++) {
+        int count = 0; 
+
+        // Inner loop to count the frequency of arr[i]
+        for (int j = 0; j < n; j++) {
+            if (arr[i] == arr[j]) {
                 count++;
-            } else {
-                count--;
             }
         }
-    }
 
-    // Check if the candidate is the actual majority element
-    count = 0;
-    for (int i = 0; i < N; i++) {
-        if (a[i] == candidate) {
-            count++;
+        // Check if count of arr[i] is more than half the size of the array
+        if (count > n / 2) {
+            return arr[i]; 
         }
     }
 
-    if (count > N / 2) {
-        return candidate;
-    } else {
-        return -1; // No majority element found
-    }
+    // If no majority element found, return -1
+    return -1;
     }
 };
+
 
 //{ Driver Code Starts.
 
