@@ -1,4 +1,4 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/palindrome-string0817/1?page=1&category=Strings&sortBy=submissions">Palindrome String</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;">You are given a string&nbsp;<strong><code>s</code></strong>. Your task is to determine if the string is a palindrome. A string is considered a palindrome if it reads the same forwards and backwards.</span></p>
+<h2><a href="https://www.geeksforgeeks.org/problems/palindrome-string0817/1?page=3&category=Data%20Structures,Mathematical&sortBy=submissions">Palindrome String</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;">You are given a string&nbsp;<strong><code>s</code></strong>. Your task is to determine if the string is a palindrome. A string is considered a palindrome if it reads the same forwards and backwards.</span></p>
 <p><span style="font-size: 14pt;"><strong>Examples :</strong></span></p>
 <pre><span style="font-size: 14pt;"><strong>Input: </strong>s = "abba"
 <strong>Output: </strong>true
