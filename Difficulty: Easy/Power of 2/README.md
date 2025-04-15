@@ -1,4 +1,4 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/power-of-2-1587115620/1?page=2&sortBy=submissions">Power of 2</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given a non-negative integer <strong>n</strong>. The task is to check if it is a power of <strong>2</strong>.&nbsp; <br></span></p>
+<h2><a href="https://www.geeksforgeeks.org/problems/power-of-2-1587115620/1?page=2&category=Data%20Structures,Mathematical&sortBy=submissions">Power of 2</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given a non-negative integer <strong>n</strong>. The task is to check if it is a power of <strong>2</strong>.&nbsp; <br></span></p>
 <p><span style="font-size: 18px;"><strong>Examples<br></strong></span></p>
 <pre><span style="font-size: 18px;"><strong>Input: </strong>n = 8
 <strong>Output: </strong>true
