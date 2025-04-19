@@ -6,5 +6,4 @@
 </span></pre>
 <pre><span style="font-size: 18px;"><strong>Input:</strong> arr[] = [1, 2, 3, 1, 2]<strong>
 Output:</strong> 3<br><strong>Explanation:</strong> There are three distinct persons in the queue, so 3 kilograms of apples need to be distributed.</span></pre>
-<p><span style="font-size: 18px;"><strong>Expected Time Complexity:</strong> O(n).<br><strong>Expected Auxiliary Space:</strong> O(n).</span></p>
 <p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ arr.size() ≤ 10<sup>6</sup><br>1 ≤ arr[i] ≤ 10<sup>6</sup></span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>set</code>&nbsp;<code>Arrays</code>&nbsp;<code>STL</code>&nbsp;<code>Data Structures</code>&nbsp;
