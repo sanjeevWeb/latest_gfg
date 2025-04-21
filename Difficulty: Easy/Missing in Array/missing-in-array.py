@@ -1,6 +1,5 @@
-#User function Template for python3
 class Solution:
-    def missingNumber(self, arr):
+    def missingNum(self, arr):
         # code here
         n = len(arr)+1
         s = sum(arr)
@@ -20,7 +19,7 @@ class Solution:
 t = int(input())
 for _ in range(0, t):
     arr = list(map(int, input().split()))
-    s = Solution().missingNumber(arr)
+    s = Solution().missingNum(arr)
     print(s)
 
     print("~")
