@@ -12,29 +12,20 @@ using namespace std;
 class Solution {
   public:
     int majorityElement(vector<int>& arr) {
-
-        // your code here
-         int n = arr.size();  
-
-    // Loop to consider each element as a candidate for majority
-    for (int i = 0; i < n; i++) {
-        int count = 0; 
-
-        // Inner loop to count the frequency of arr[i]
-        for (int j = 0; j < n; j++) {
-            if (arr[i] == arr[j]) {
-                count++;
+        // code here
+        unordered_map<int,int>umap;
+        int sizToCompare = arr.size()/2;
+        
+        for(int i=0;i<arr.size();i++){
+            umap[arr[i]]++;
+        }
+        
+        for(auto itr : umap){
+            if(itr.second > sizToCompare){
+                return itr.first;
             }
         }
-
-        // Check if count of arr[i] is more than half the size of the array
-        if (count > n / 2) {
-            return arr[i]; 
-        }
-    }
-
-    // If no majority element found, return -1
-    return -1;
+        return -1;
     }
 };
 
@@ -58,6 +49,7 @@ int main() {
 
         Solution obj;
         cout << obj.majorityElement(a) << endl;
+        cout << "~" << endl;
     }
 
     return 0;
