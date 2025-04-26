@@ -1,19 +1,14 @@
-#User function Template for python3
 class Solution:
     def getSecondLargest(self, arr):
         # Code Here
-        max = 0
-        smax = 0
-        for num in arr:
-            if num > max:
-                if max > smax:
-                    smax = max
-                max = num
-            elif num > smax and num < max:
-                smax = num
-        if smax == 0:
-            smax = -1
-        return smax
+        arr.sort()
+        for i in range(len(arr)-1,-1, -1):
+            if arr[i]!= arr[i-1]:
+                return arr[i-1]
+        return -1
+
+
+
 
 #{ 
  # Driver Code Starts
