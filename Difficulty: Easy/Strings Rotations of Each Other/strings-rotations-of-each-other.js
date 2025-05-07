@@ -51,8 +51,7 @@ class Solution {
     // Function to check if two strings are rotations of each other or not.
     areRotations(s1, s2) {
         // code here
-        
-         if(s1.length!=s2.length)
+        if(s1.length!=s2.length)
      {
          return false;
      }
